@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Action</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <style>
+        body {
+            background-color: rgb(0, 67, 117);
+            color: white;
+            margin: 10px;    
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+    <script src="sdk/scripts/VSS.SDK.js"></script>
+    <script>
+        VSS.init();
+    
+        // Use an IIFE to create an object that satisfies the IContributedMenuSource contract
+        var menuContributionHandler = (function () {
+            "use strict";
+            return {
+                // This is a callback that gets invoked when a user clicks the newly contributed menu item
+                // The actionContext parameter contains context data surrounding the circumstances of this
+                // action getting invoked.
+                execute: function (actionContext) {
+                    alert("Hello, world");
+                }
+            };
+        }());
+    
+        // Associate the menuContributionHandler object with the "myAction" menu contribution from the manifest.
+        VSS.register("myAction", menuContributionHandler);
+    </script>
+</head>
+<body>
+    This is my Actions Page
+</body>
+</html>
