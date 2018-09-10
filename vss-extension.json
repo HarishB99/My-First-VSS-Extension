@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "my-first-extension",
     "publisher": "HarishB",
-    "version": "1.0.6.6",
+    "version": "2.0.0.3",
     "name": "My First Extension",
     "description": "A sample Visual Studio Services extension",
     "public": false,

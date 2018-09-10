@@ -28,13 +28,8 @@
             //     }
             // }
             var webcontext = VSS.getWebContext();
-            // for (var key in webcontext) {
-            //     if (webcontext.hasOwnProperty(key)) {
-            //         for (var key2 in webcontext[key]) {
-            //             document.getElementById("webcontext").innerHTML += (key + " -> " + webcontext[key][key2] + "<br/>");
-            //         }
-            //     }
-            // }
+            console.log(webcontext);
+            document.getElementById("webcontext").innerHTML = JSON.stringify(webcontext);
             document.getElementById("name").innerText = webcontext.user.name;
         });
         VSS.require(["VSS/Controls", "VSS/Controls/Menus"], function(Controls, Menus) {
@@ -133,9 +128,9 @@
 <body>
     <div id="sample-container"></div>    
     <h1>Hello, <span id="name"></span></h1>
-    <!-- <span id="vss"></span>
+    <!-- <span id="vss"></span> -->
     <br/>
     <br/>
-    <span id="webcontext"></span> -->
+    <span id="webcontext"></span>
 </body>
 </html>
